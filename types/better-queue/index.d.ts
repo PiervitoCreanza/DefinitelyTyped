@@ -28,7 +28,7 @@ declare class BetterQueue<T = any, K = any> extends EventEmitter {
     resetStats(): void;
 
     on(event: "task_finish", listener: (taskId: any, result: K) => void): this;
-    on(event: "task_failed", listener: (taskId: any, errorMessage: string) => void): this;
+    on(event: "task_failed", listener: (taskId: any, error: any) => void): this;
     on(event: "task_progress", listener: (taskId: any, completed: number, total: number) => void): this;
     on(event: BetterQueue.QueueEvent, listener: (...args: any[]) => void): this;
 }
